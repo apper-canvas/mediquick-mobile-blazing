@@ -69,19 +69,32 @@ const OrderCard = ({ order, isAdmin = false, onStatusUpdate }) => {
         </Badge>
       </div>
 
-      {/* Items */}
-      <div className="space-y-2 mb-4">
+{/* Items */}
+      <div className="space-y-3 mb-4">
         {items.map((item, index) => (
-          <div key={index} className="flex items-center justify-between text-sm">
-            <div className="flex-1">
-              <span className="text-gray-900">{item.name}</span>
-              <span className="text-gray-600 ml-2">× {item.quantity}</span>
+          <div key={index} className="flex items-center space-x-3">
+            {/* Item Image */}
+            <div className="flex-shrink-0">
+              <img
+                src={`/api/placeholder/200/200`}
+                alt={item.name}
+                className="w-12 h-12 object-cover rounded-lg bg-surface-100"
+              />
             </div>
-            <span className="text-gray-900">₹{(item.price * item.quantity).toFixed(2)}</span>
+            
+            {/* Item Details */}
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center justify-between">
+                <div className="flex-1">
+                  <span className="text-gray-900 font-medium text-sm block truncate">{item.name}</span>
+                  <span className="text-gray-600 text-xs">Quantity: {item.quantity}</span>
+                </div>
+                <span className="text-gray-900 font-semibold text-sm ml-2">₹{(item.price * item.quantity).toFixed(2)}</span>
+              </div>
+            </div>
           </div>
         ))}
       </div>
-
       {/* Prescription */}
       {prescriptionUrl && (
         <div className="flex items-center space-x-2 mb-4 p-2 bg-warning/10 rounded-lg">
