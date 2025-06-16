@@ -5,15 +5,28 @@ import Badge from '@/components/atoms/Badge'
 import Button from '@/components/atoms/Button'
 
 const OrderCard = ({ order, isAdmin = false, onStatusUpdate }) => {
+  // Early return if order is null/undefined
+  if (!order) {
+    return (
+      <div className="bg-white rounded-lg shadow-sm border border-surface-200 p-6">
+        <div className="text-center text-gray-500">
+          <ApperIcon name="AlertTriangle" className="w-8 h-8 mx-auto mb-2" />
+          <p>Order data not available</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Safe destructuring with default values
   const {
-    Id,
-    items,
-    status,
-    totalAmount,
-    prescriptionUrl,
-    deliveryAddress,
-    createdAt
-  } = order
+    Id = '',
+    items = [],
+    status = 'unknown',
+    totalAmount = 0,
+    prescriptionUrl = null,
+    deliveryAddress = {},
+    createdAt = new Date().toISOString()
+  } = order;
 
   const getStatusVariant = (status) => {
     switch (status) {

@@ -140,16 +140,24 @@ const Orders = () => {
             animate={{ opacity: 1 }}
             className="space-y-4"
           >
-            {filteredOrders.map((order, index) => (
-              <motion.div
-                key={order.Id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <OrderCard order={order} />
-              </motion.div>
-            ))}
+{filteredOrders.map((order, index) => {
+              // Validate order data before rendering
+              if (!order || !order.Id) {
+                console.warn('Invalid order data:', order);
+                return null;
+              }
+              
+              return (
+                <motion.div
+                  key={order.Id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <OrderCard order={order} />
+                </motion.div>
+              );
+            })}
           </motion.div>
         )}
       </div>
