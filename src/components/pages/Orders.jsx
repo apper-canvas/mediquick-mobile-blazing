@@ -141,15 +141,22 @@ const Orders = () => {
             className="space-y-4"
           >
 {filteredOrders.map((order, index) => {
-              // Validate order data before rendering
-              if (!order || !order.Id) {
-                console.warn('Invalid order data:', order);
+              // Enhanced validation for order data
+              if (!order || typeof order !== 'object') {
+                console.warn('Invalid order object:', order);
+                return null;
+              }
+              
+              // Check for required order properties
+              const orderId = order.Id || order.id;
+              if (!orderId) {
+                console.warn('Order missing ID:', order);
                 return null;
               }
               
               return (
                 <motion.div
-                  key={order.Id}
+                  key={orderId}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
