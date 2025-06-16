@@ -1,0 +1,122 @@
+[
+  {
+    "Id": 1,
+    "name": "Paracetamol 500mg",
+    "genericName": "Paracetamol",
+    "brand": "Calpol",
+    "category": "Pain Relief",
+    "price": 25.50,
+    "stock": 150,
+    "requiresPrescription": false,
+    "imageUrl": "/api/placeholder/200/200",
+    "description": "Effective pain relief and fever reducer. Safe for adults and children when used as directed."
+  },
+  {
+    "Id": 2,
+    "name": "Amoxicillin 250mg",
+    "genericName": "Amoxicillin",
+    "brand": "Amoxil",
+    "category": "Antibiotics",
+    "price": 85.00,
+    "stock": 45,
+    "requiresPrescription": true,
+    "imageUrl": "/api/placeholder/200/200",
+    "description": "Broad-spectrum antibiotic for bacterial infections. Prescription required for safety."
+  },
+  {
+    "Id": 3,
+    "name": "Ibuprofen 400mg",
+    "genericName": "Ibuprofen",
+    "brand": "Advil",
+    "category": "Pain Relief",
+    "price": 35.75,
+    "stock": 85,
+    "requiresPrescription": false,
+    "imageUrl": "/api/placeholder/200/200",
+    "description": "Anti-inflammatory pain reliever. Effective for headaches, muscle pain, and joint pain."
+  },
+  {
+    "Id": 4,
+    "name": "Omeprazole 20mg",
+    "genericName": "Omeprazole",
+    "brand": "Prilosec",
+    "category": "Digestive Health",
+    "price": 120.00,
+    "stock": 30,
+    "requiresPrescription": true,
+    "imageUrl": "/api/placeholder/200/200",
+    "description": "Proton pump inhibitor for acid reflux and ulcers. Requires medical supervision."
+  },
+  {
+    "Id": 5,
+    "name": "Cetirizine 10mg",
+    "genericName": "Cetirizine",
+    "brand": "Zyrtec",
+    "category": "Allergy Relief",
+    "price": 45.25,
+    "stock": 120,
+    "requiresPrescription": false,
+    "imageUrl": "/api/placeholder/200/200",
+    "description": "24-hour allergy relief for seasonal allergies, hay fever, and hives."
+  },
+  {
+    "Id": 6,
+    "name": "Metformin 500mg",
+    "genericName": "Metformin",
+    "brand": "Glucophage",
+    "category": "Diabetes",
+    "price": 75.50,
+    "stock": 60,
+    "requiresPrescription": true,
+    "imageUrl": "/api/placeholder/200/200",
+    "description": "First-line treatment for type 2 diabetes. Helps control blood sugar levels."
+  },
+  {
+    "Id": 7,
+    "name": "Vitamin D3 1000 IU",
+    "genericName": "Cholecalciferol",
+    "brand": "NatureWise",
+    "category": "Vitamins",
+    "price": 55.00,
+    "stock": 200,
+    "requiresPrescription": false,
+    "imageUrl": "/api/placeholder/200/200",
+    "description": "Essential vitamin for bone health and immune system support."
+  },
+  {
+    "Id": 8,
+    "name": "Losartan 50mg",
+    "genericName": "Losartan",
+    "brand": "Cozaar",
+    "category": "Heart Health",
+    "price": 95.75,
+    "stock": 25,
+    "requiresPrescription": true,
+    "imageUrl": "/api/placeholder/200/200",
+    "description": "ACE inhibitor for high blood pressure and heart protection. Prescription required."
+  },
+  {
+    "Id": 9,
+    "name": "Fluticasone Nasal Spray",
+    "genericName": "Fluticasone",
+    "brand": "Flonase",
+    "category": "Respiratory",
+    "price": 185.00,
+    "stock": 40,
+    "requiresPrescription": false,
+    "imageUrl": "/api/placeholder/200/200",
+    "description": "Corticosteroid nasal spray for allergic rhinitis and nasal congestion."
+  },
+  {
+    "Id": 10,
+    "name": "Dextromethorphan Syrup",
+    "genericName": "Dextromethorphan",
+    "brand": "Robitussin",
+    "category": "Cough & Cold",
+    "price": 65.25,
+    "stock": 90,
+    "requiresPrescription": false,
+    "imageUrl": "/api/placeholder/200/200",
+    "description": "Effective cough suppressant for dry, non-productive coughs."
+  }
+]
